@@ -1,0 +1,5 @@
+cam_url: https://atfinvstorage.blob.core.windows.net/installers/cloud-access-manager_1.0.92_a50ee9b-dev_linux_amd64.tar.gz -o cloud-access-manager.tar.gz
+cam_dest: /opt/cloud-access-manager.tar.gz
+
+src_file: /opt/cloud-access-manager.tar.gz
+dest_file: /opt/cloud-access-manager
