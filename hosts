@@ -1,0 +1,4 @@
+#The ansible script will be run against the instances below
+[azure]
+
+[aws]
