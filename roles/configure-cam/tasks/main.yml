@@ -1,19 +1,23 @@
 ---
-- name: Update Centos
-  yum:
+- name: Update the OS
+  package :
     name: '*'
     state: latest
 
 - name: Download CAM Standalone
-  get_url: "{{ cam_url }}"
-  dest: "{{ cam_dest }}"
+  get_url:
+    url: "{{ cam_url }}"
+    dest: "{{ cam_dest }}"
+    mode: 755
+    owner: "{{ owner }}"
+    group: "{{ group }}"
 
 - name: Extract archive
   unarchive:
     src: "{{ src_file }}"
     dest: "{{ dest_file }}"
+    remote_src: true
 
 - name: Run the installer
-  shell: /opt/cloud-access-manager install --preview --accept-policies
+  shell: "/opt/cloud-access-manager install --preview --accept-policies"
 
-#- name: Input CAM registration code for cloud
