@@ -1,0 +1,5 @@
+Host aws-ca
+    HostName 15.223.84.34
+    User centos
+    Port 22
+    IdentityFile ~/.ssh/ca-central-aws
