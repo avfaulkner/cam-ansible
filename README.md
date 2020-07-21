@@ -8,13 +8,13 @@ Configures CAM Standalone software.
 ### Tooling
 - Ansible >= 2.9.10
 
-## Usage
-To run Ansible script on remote server:
+# Directions for usage
+This is currently being run as a playbook from a local workstation. 
 
-```
-ansible-playbook -i hosts main.yml
-```
-
+## Steps 
+1. Clone the repo onto the local workstation and run the role as part of a playbook.
+2. Create an inventory file consisting of the public IPs of the target hosts.  
+3. Create an ssh config file that designates the username, port and ssh connection information for the bastion.
 
 
 **Note**
