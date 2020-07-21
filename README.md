@@ -16,7 +16,16 @@ This is currently being run as a playbook from a local workstation.
 2. Modify the hosts file consisting of the public IPs and host variables of the target hosts.  
 3. Modify the ssh.cfg file that designates the username, port and ssh connection information for the target host.
 4. Modify the group_vars/vars.yml file with the proper variables.
-5. After running the script, the output of the [configure-cam : Run the installer] section will contain the temporary password
+5. Run the script:
+```
+ansible-playbook -i hosts main.yml -vv
+```
+Optional:
+Run the script against a specific host or host category in the host file
+```
+ansible-playbook -i hosts main.yml -vv -l aws-centos
+```
+6. After running the script, the output of the [configure-cam : Run the installer] section will contain the temporary password
 and username to log in to the CAM Standalone web interface. 
 
 ```
